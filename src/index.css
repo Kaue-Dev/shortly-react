@@ -1,0 +1,33 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  color: hsl(260, 8%, 14%);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  background-color: hsl(180, 66%, 49%);
+  color: #FFF;
+  font-weight: 700;
+  transition: .3s;
+  padding: 12px 30px;
+  border-radius: 22px;
+}
+
+button:hover {
+  background-color: hsl(180, 75%, 43%);
+}
+
+p, a {
+  color: #7d7d7d;
+}
