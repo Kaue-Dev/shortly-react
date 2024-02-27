@@ -18,9 +18,10 @@ const StyledHeader = styled.header`
   }
   a {
     font-weight: 700;
+    transition: .2s;
   }
   a:hover {
-    text-decoration: underline;
+    color: hsl(255, 11%, 22%);
   }
   .buttons {
     display: flex;
