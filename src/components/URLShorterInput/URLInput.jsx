@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import styled from "styled-components"
 import bgDesktop from "../../images/bg-shorten-desktop.svg"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import axios from "axios"
 import URLShorted from "./URLShorted"
 
@@ -52,10 +52,10 @@ const URLInput = () => {
 
   const [inputValue, setInputValue] = useState('')
   const [inputInvalid, setInputInvalid] = useState(false)
-  const [shortURL, setShortURL] = useState('')
+  const [shortURL, setShortURL] = useState('') // Verificar isso aqui depois
   const [loading, setLoading] = useState(false)
-  const [URLS, setURLS] = useState([]) // State para armazenar URLS originais
-  const [shortedURLS, setShortedURLS] = useState([]) // State para armazenar URLS encurtadas
+  const [URLS, setURLS] = useState([])
+  const [shortedURLS, setShortedURLS] = useState([])
 
   const handleClick = async () => {
     setLoading(true)
@@ -66,7 +66,7 @@ const URLInput = () => {
         setInputInvalid(true)
       } else {
         const shortURL = res.data
-        setShortURL(shortURL)
+        setShortURL(shortURL) // Verificar isso aqui depois
         setShortedURLS(prevURLs => [...prevURLs, shortURL])
         setURLS(prevURLs => [...prevURLs, inputValue])
       }
@@ -102,8 +102,6 @@ const URLInput = () => {
           shortedURLS.map((url, i) => <URLShorted key={i} originalURL={URLS[i]} shortedURL={url} />)
         }
       </div>
-      {/*useEffect(() => console.log("URLs armazenadas:", URLS), [URLS])*/}
-      {/*useEffect(() => console.log("URLs Curtas armazenadas:", shortedURLS), [shortedURLS])*/}
     </div>
   )
 }
