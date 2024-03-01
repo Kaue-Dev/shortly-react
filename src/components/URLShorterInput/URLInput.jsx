@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import styled from "styled-components"
 import bgDesktop from "../../images/bg-shorten-desktop.svg"
+import bgMobile from "../../images/bg-shorten-mobile.svg"
 import { useState } from "react"
 import axios from "axios"
 import URLShorted from "./URLShorted"
@@ -30,6 +31,22 @@ const StyledInputSection = styled.section`
     font-style: italic;
     padding: 10px 0 0 10px;
   }
+  @media (max-width: 780px) {
+    width: 650px;
+    button {
+      width: 190px;
+    }
+  }
+  @media (max-width: 500px) {
+    background-image: url(${bgMobile});
+    width: 330px;
+    div {
+      flex-direction: column;
+      button {
+        width: 100%;
+      }
+    }
+  }
 `
 
 const StyledInput = styled.input`
@@ -42,6 +59,9 @@ const StyledInput = styled.input`
   border: 2px solid ${(props) => props.$isInvalid ? '#f46262' : 'transparent'};
   &::placeholder {
     color: ${(props) => props.$isInvalid ? '#f46262' : '#757575'};
+  }
+  @media (max-width: 500px) {
+    width: 100%;
   }
 `
 
