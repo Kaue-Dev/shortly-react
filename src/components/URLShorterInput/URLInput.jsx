@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import styled from "styled-components"
 import bgDesktop from "../../images/bg-shorten-desktop.svg"
 import bgMobile from "../../images/bg-shorten-mobile.svg"
@@ -72,7 +71,6 @@ const URLInput = () => {
 
   const [inputValue, setInputValue] = useState('')
   const [inputInvalid, setInputInvalid] = useState(false)
-  const [shortURL, setShortURL] = useState('') // Verificar isso aqui depois
   const [loading, setLoading] = useState(false)
   const [URLS, setURLS] = useState([])
   const [shortedURLS, setShortedURLS] = useState([])
@@ -90,7 +88,6 @@ const URLInput = () => {
           return;
         }
         const shortURL = res.data
-        setShortURL(shortURL) // Verificar isso aqui depois
         setShortedURLS(prevURLs => [...prevURLs, shortURL])
         setURLS(prevURLs => [...prevURLs, inputValue])
       }
