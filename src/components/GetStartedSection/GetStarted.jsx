@@ -26,6 +26,7 @@ const StyledSection = styled.section`
       h1 {
         font-size: 52px;
         line-height: 65px;
+        overflow: hidden;
       }
       h1, p {
         width: 100%;

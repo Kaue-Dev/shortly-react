@@ -6,6 +6,7 @@
   color: hsl(260, 8%, 14%);
   font-size: 16px;
   font-weight: 500;
+  overflow-x: hidden;
 }
 
 a {
