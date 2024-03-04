@@ -85,6 +85,10 @@ const URLInput = () => {
       if (inputValue === '') {
         setInputInvalid(true)
       } else {
+        if (res.data === 'Error: Invalid Url!') {
+          setInputInvalid(true)
+          return;
+        }
         const shortURL = res.data
         setShortURL(shortURL) // Verificar isso aqui depois
         setShortedURLS(prevURLs => [...prevURLs, shortURL])
