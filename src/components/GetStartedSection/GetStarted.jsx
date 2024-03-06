@@ -6,6 +6,7 @@ const StyledSection = styled.section`
   align-items: center;
   justify-content: center;
   margin-top: 30px;
+  overflow-x: hidden;
   .textsAndButton {
     padding: 0px 80px;
     h1 {
@@ -13,7 +14,6 @@ const StyledSection = styled.section`
       width: 500px;
       font-weight: 700;
       line-height: 75px;
-      overflow: hidden;
     }
     p {
       margin-bottom: 30px;

@@ -5,6 +5,16 @@ import { useState } from "react"
 import axios from "axios"
 import URLShorted from "./URLShorted"
 
+const StyledContainer = styled.div`
+  background-color: #EFF1F7; 
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 90px;
+  overflow: hidden;
+`
+
 const StyledInputSection = styled.section`
   display: flex;
   flex-direction: column;
@@ -12,11 +22,12 @@ const StyledInputSection = styled.section`
   background-color: hsl(257, 27%, 26%);
   background-image: url(${bgDesktop});
   background-repeat: no-repeat;
-  padding: 30px;
+  padding: 40px 0;
+  padding-left: 60px;
   background-size: cover;
   width: 900px;
   border-radius: 12px;
-  margin-bottom: 20px;
+  margin: 30px 0;
   div {
     display: flex;
     gap: 20px;
@@ -32,6 +43,7 @@ const StyledInputSection = styled.section`
   }
   @media (max-width: 780px) {
     width: 650px;
+    padding: 30px;
     button {
       width: 190px;
     }
@@ -102,7 +114,7 @@ const URLInput = () => {
   }
   
   return (
-    <div style={{display: "flex", flexDirection: "column", alignItems: "center", backgroundColor: "#EFF1F7", width: "100%", marginTop: "90px"}}>
+    <StyledContainer>
       <StyledInputSection>
         <div>
           <StyledInput 
@@ -123,7 +135,7 @@ const URLInput = () => {
           shortedURLS.map((url, i) => <URLShorted key={i} originalURL={URLS[i]} shortedURL={url} />)
         }
       </div>
-    </div>
+    </StyledContainer>
   )
 }
 
