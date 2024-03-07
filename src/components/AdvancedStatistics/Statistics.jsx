@@ -29,6 +29,12 @@ const StyledStatistics = styled.section`
     gap: 30px;
     flex-wrap: wrap;
     justify-content: center;
+    .card:nth-child(2) {
+      margin-top: 40px;
+    }
+    .card:nth-child(3) {
+      margin-top: 80px;
+    }
   }
 `
 
@@ -41,21 +47,27 @@ const Statistics = () => {
           <p>Track how your links are performing across the web with our advanced statistics dashboard.</p>
         </div>
         <div className='cards'>
-          <Card 
-            icon={iconBrand}
-            title="Brand Recognition"
-            description="lorem ipsum dolor sit amet consectetur and consectetur adipiscing elit esse cillum dolore magna"
-          />
-          <Card 
-            icon={iconDetailed}
-            title="Detailed Records"
-            description="lorem ipsum dolor sit amet consectetur and consectetur adipiscing elit esse cillum dolore magna"
-          />
-          <Card 
-            icon={iconFully}
-            title="Fully Customizable"
-            description="lorem ipsum dolor sit amet consectetur and consectetur adipiscing elit esse cillum dolore magna"
-          />
+          <div className="card">
+            <Card 
+              icon={iconBrand}
+              title="Brand Recognition"
+              description="lorem ipsum dolor sit amet consectetur and consectetur adipiscing elit esse cillum dolore magna"
+            />
+          </div>
+          <div className="card">
+            <Card 
+              icon={iconDetailed}
+              title="Detailed Records"
+              description="lorem ipsum dolor sit amet consectetur and consectetur adipiscing elit esse cillum dolore magna"
+            />
+          </div>
+          <div className="card">
+            <Card 
+              icon={iconFully}
+              title="Fully Customizable"
+              description="lorem ipsum dolor sit amet consectetur and consectetur adipiscing elit esse cillum dolore magna"
+            />
+          </div>
         </div>
       </StyledStatistics>
     </>
