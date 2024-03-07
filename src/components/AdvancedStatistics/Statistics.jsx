@@ -1,16 +1,16 @@
-import styled from 'styled-components'
-import Card from './Card'
+import styled from "styled-components";
+import Card from "./Card";
 
-import iconBrand from '../../images/icon-brand-recognition.svg'
-import iconDetailed from '../../images/icon-detailed-records.svg'
-import iconFully from '../../images/icon-fully-customizable.svg'
+import iconBrand from "../../images/icon-brand-recognition.svg";
+import iconDetailed from "../../images/icon-detailed-records.svg";
+import iconFully from "../../images/icon-fully-customizable.svg";
 
 const StyledStatistics = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  background-color: #EFF1F7; 
+  background-color: #eff1f7;
   width: 100%;
   div.texts {
     display: flex;
@@ -36,33 +36,53 @@ const StyledStatistics = styled.section`
       margin-top: 80px;
     }
   }
-`
+  @media (max-width: 1125px) {
+    div.cards {
+      .card:nth-child(2) {
+        margin-top: 0;
+      }
+      .card:nth-child(3) {
+        margin-top: 30px;
+      }
+    }
+  }
+  @media (max-width: 745px) {
+    div.cards {
+      .card:nth-child(2) {
+        margin-top: 30px;
+      }
+    }
+  }
+`;
 
 const Statistics = () => {
   return (
     <>
       <StyledStatistics>
-        <div className='texts'>
+        <div className="texts">
           <h1>Advanced Statistics</h1>
-          <p>Track how your links are performing across the web with our advanced statistics dashboard.</p>
+          <p>
+            Track how your links are performing across the web with our advanced
+            statistics dashboard.
+          </p>
         </div>
-        <div className='cards'>
+        <div className="cards">
           <div className="card">
-            <Card 
+            <Card
               icon={iconBrand}
               title="Brand Recognition"
               description="lorem ipsum dolor sit amet consectetur and consectetur adipiscing elit esse cillum dolore magna"
             />
           </div>
           <div className="card">
-            <Card 
+            <Card
               icon={iconDetailed}
               title="Detailed Records"
               description="lorem ipsum dolor sit amet consectetur and consectetur adipiscing elit esse cillum dolore magna"
             />
           </div>
           <div className="card">
-            <Card 
+            <Card
               icon={iconFully}
               title="Fully Customizable"
               description="lorem ipsum dolor sit amet consectetur and consectetur adipiscing elit esse cillum dolore magna"
@@ -71,7 +91,7 @@ const Statistics = () => {
         </div>
       </StyledStatistics>
     </>
-  )
-}
+  );
+};
 
-export default Statistics
+export default Statistics;
