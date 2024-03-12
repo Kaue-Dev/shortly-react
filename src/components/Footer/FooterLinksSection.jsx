@@ -12,12 +12,14 @@ const StyledSection = styled.section`
     display: flex;
     flex-direction: column;
     gap: 6px;
-    width: fit-content;
     a {
       width: fit-content;
     }
     a:hover {
       color: hsl(180, 66%, 49%);
+    }
+    @media (max-width: 500px) {
+      align-items: center;
     }
   }
 `;

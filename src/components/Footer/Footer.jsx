@@ -8,12 +8,13 @@ import instagram from '../../images/icon-instagram.svg'
 
 const StyledFooter = styled.footer`
   background-color: hsl(260, 8%, 14%);
-  height: 300px;
+  min-height: 300px;
   display: flex;
   gap: 120px;
   justify-content: center;
   align-items: flex-start;
   padding-top: 90px;
+  overflow-x: hidden;
   h1 {
     font-size: 32px;
     margin-right: 150px;
@@ -27,6 +28,22 @@ const StyledFooter = styled.footer`
   .socialMediaIcons {
     display: flex;
     gap: 20px;
+  }
+  @media (max-width: 780px) {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    gap: 90px;
+    h1 {
+      margin-right: 0;
+    }
+    @media (max-width: 500px) {
+      .links {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+      }
+    }
   }
 `
 
