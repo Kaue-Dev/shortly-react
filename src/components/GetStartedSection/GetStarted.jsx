@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import styled from "styled-components";
 import svg from "../../images/illustration-working.svg";
 
@@ -54,7 +55,7 @@ const StyledSection = styled.section`
   }
 `;
 
-const GetStarted = () => {
+const GetStarted = ({ scroll }) => {
   return (
     <>
       <StyledSection>
@@ -65,7 +66,7 @@ const GetStarted = () => {
               Build your brands recognation and get detailed insights on how
               your links are performing.
             </p>
-            <button>Get Started</button>
+            <button onClick={scroll}>Get Started</button>
           </div>
         </Slide>
         <div>

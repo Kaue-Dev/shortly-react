@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import bgDesktop from "../../images/bg-shorten-desktop.svg";
 import bgMobile from "../../images/bg-shorten-mobile.svg";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import axios from "axios";
 import URLShorted from "./URLShorted";
 import { Slide } from "react-awesome-reveal";
@@ -114,10 +114,12 @@ const URLInput = () => {
       });
   };
 
+  const ref = useRef()
+
   return (
     <StyledContainer>
       <Slide direction="up" triggerOnce={true} >
-        <StyledInputSection>
+        <StyledInputSection ref={ref}>
           <div>
             <StyledInput
               type="text"

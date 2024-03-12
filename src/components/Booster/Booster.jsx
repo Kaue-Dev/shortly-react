@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import styled from "styled-components"
 
 import bgDesktop from '../../images/bg-boost-desktop.svg'
@@ -45,7 +46,7 @@ const StyledBooster = styled.section`
   }
 `
 
-const Booster = () => {
+const Booster = ({ scroll }) => {
   return (
     <StyledContainer>
       <StyledBooster>
@@ -53,7 +54,7 @@ const Booster = () => {
           <h1>Boost your links today</h1>
         </Fade>
         <Fade direction="right" triggerOnce={true}>
-          <button>Get Started</button>
+          <button onClick={scroll}>Get Started</button>
         </Fade>
       </StyledBooster>
     </StyledContainer>

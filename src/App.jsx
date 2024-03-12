@@ -7,6 +7,7 @@ import Booster from "./components/Booster/Booster";
 import Footer from "./components/Footer/Footer";
 
 import { Slide } from "react-awesome-reveal";
+import { useRef } from "react";
 
 const StyledContainer = styled.div`
   display: flex;
@@ -14,18 +15,28 @@ const StyledContainer = styled.div`
 `;
 
 const App = () => {
+
+  const ref = useRef()
+
+  const scroll = () => {
+    console.log(ref);
+    if (ref.current) {
+      ref.current.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   return (
     <>
       <div>
         <Slide direction="down" triggerOnce={true}>
           <Header />
         </Slide>
-        <GetStarted />
-        <StyledContainer>
+        <GetStarted scroll={scroll} />
+        <StyledContainer ref={ref}>
           <URLInput />
         </StyledContainer>
         <Statistics />
-        <Booster />
+        <Booster scroll={scroll} />
         <Footer />
       </div>
     </>
