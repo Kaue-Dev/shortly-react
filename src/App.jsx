@@ -4,6 +4,7 @@ import Header from "./components/Header/Header"
 import URLInput from "./components/URLShorterInput/URLInput"
 import Statistics from "./components/AdvancedStatistics/Statistics"
 import Booster from "./components/Booster/Booster"
+import Footer from "./components/Footer/Footer"
 
 const StyledContainer = styled.div`
   display: flex;
@@ -21,6 +22,7 @@ const App = () => {
         </StyledContainer>
         <Statistics />
         <Booster />
+        <Footer />
       </div>
     </>
   )
