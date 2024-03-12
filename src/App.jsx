@@ -1,21 +1,25 @@
-import styled from "styled-components"
-import GetStarted from "./components/GetStartedSection/GetStarted"
-import Header from "./components/Header/Header"
-import URLInput from "./components/URLShorterInput/URLInput"
-import Statistics from "./components/AdvancedStatistics/Statistics"
-import Booster from "./components/Booster/Booster"
-import Footer from "./components/Footer/Footer"
+import styled from "styled-components";
+import GetStarted from "./components/GetStartedSection/GetStarted";
+import Header from "./components/Header/Header";
+import URLInput from "./components/URLShorterInput/URLInput";
+import Statistics from "./components/AdvancedStatistics/Statistics";
+import Booster from "./components/Booster/Booster";
+import Footer from "./components/Footer/Footer";
+
+import { Slide } from "react-awesome-reveal";
 
 const StyledContainer = styled.div`
   display: flex;
   justify-content: center;
-`
+`;
 
 const App = () => {
   return (
     <>
       <div>
-        <Header />
+        <Slide direction="down" triggerOnce={true}>
+          <Header />
+        </Slide>
         <GetStarted />
         <StyledContainer>
           <URLInput />
@@ -25,7 +29,7 @@ const App = () => {
         <Footer />
       </div>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;

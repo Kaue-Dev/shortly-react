@@ -3,6 +3,8 @@ import styled from "styled-components"
 import bgDesktop from '../../images/bg-boost-desktop.svg'
 import bgMobile from '../../images/bg-boost-mobile.svg'
 
+import { Fade } from "react-awesome-reveal"
+
 const StyledContainer = styled.div`
   background-color: #EFF1F7; 
   padding-top: 120px;
@@ -47,8 +49,12 @@ const Booster = () => {
   return (
     <StyledContainer>
       <StyledBooster>
-        <h1>Boost your links today</h1>
-        <button>Get Started</button>
+        <Fade direction="left" triggerOnce={true}>
+          <h1>Boost your links today</h1>
+        </Fade>
+        <Fade direction="right" triggerOnce={true}>
+          <button>Get Started</button>
+        </Fade>
       </StyledBooster>
     </StyledContainer>
   )

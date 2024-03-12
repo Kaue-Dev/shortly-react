@@ -6,6 +6,8 @@ import twitter from '../../images/icon-twitter.svg'
 import pinterest from '../../images/icon-pinterest.svg'
 import instagram from '../../images/icon-instagram.svg'
 
+import { Fade } from 'react-awesome-reveal'
+
 const StyledFooter = styled.footer`
   background-color: hsl(260, 8%, 14%);
   min-height: 300px;
@@ -50,6 +52,8 @@ const StyledFooter = styled.footer`
 const Footer = () => {
   return (
     <StyledFooter>
+
+      <Fade triggerOnce={true}>
       <div>
         <h1>Shortly</h1>
       </div>
@@ -88,6 +92,7 @@ const Footer = () => {
           <img src={instagram} alt="Instagram" />
         </a>
       </div>
+      </Fade>
     </StyledFooter>
   )
 }

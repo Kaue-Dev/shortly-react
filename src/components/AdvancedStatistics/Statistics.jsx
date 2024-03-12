@@ -5,6 +5,8 @@ import iconBrand from "../../images/icon-brand-recognition.svg";
 import iconDetailed from "../../images/icon-detailed-records.svg";
 import iconFully from "../../images/icon-fully-customizable.svg";
 
+import { Slide } from "react-awesome-reveal";
+
 const StyledStatistics = styled.section`
   display: flex;
   flex-direction: column;
@@ -68,25 +70,31 @@ const Statistics = () => {
         </div>
         <div className="cards">
           <div className="card">
-            <Card
-              icon={iconBrand}
-              title="Brand Recognition"
-              description="Boost your brand recognition with each click. Generic links don't mean a thing. Branded links help instil confidence in your content."
-            />
+            <Slide direction="up" triggerOnce={true} >
+              <Card
+                icon={iconBrand}
+                title="Brand Recognition"
+                description="Boost your brand recognition with each click. Generic links don't mean a thing. Branded links help instil confidence in your content."
+              />
+            </Slide>
           </div>
           <div className="card">
-            <Card
-              icon={iconDetailed}
-              title="Detailed Records"
-              description="Gain insights into who clicking your links. Knowing when and where people engage with your content helps inform better decisions"
-            />
+            <Slide direction="up" triggerOnce={true} >
+              <Card
+                icon={iconDetailed}
+                title="Detailed Records"
+                description="Gain insights into who clicking your links. Knowing when and where people engage with your content helps inform better decisions"
+              />
+            </Slide>
           </div>
           <div className="card">
-            <Card
-              icon={iconFully}
-              title="Fully Customizable"
-              description="Improve brand awareness and content discoverability through customizable links, supercharging audience engagement."
-            />
+            <Slide direction="up" triggerOnce={true} >
+              <Card
+                icon={iconFully}
+                title="Fully Customizable"
+                description="Improve brand awareness and content discoverability through customizable links, supercharging audience engagement."
+              />
+            </Slide>
           </div>
         </div>
       </StyledStatistics>
