@@ -2,7 +2,7 @@
 
 Shortly é um porjeto desenvolvido por mim e se trata de um Encurtador de URLs com uma interface limpa e agradável. <br>
 O encurtamento de URLs é feito apartir da seguinte API [ulvis.net](https://ulvis.net/developer.html). <br>
-Nesse projeto usei as seguintes Tecnologias: <br>
+Nesse projeto usei as seguintes Tecnologias: <br><br>
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![Styled Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
