@@ -1,6 +1,6 @@
 # Shortly
 
-- Shortly é um porjeto desenvolvido por mim e se trata de um Encurtador de URLs com uma interface limpa e agradável. <br>
+- Shortly é um projeto desenvolvido por mim e se trata de um Encurtador de URLs com uma interface limpa e agradável. <br>
 - O encurtamento de URLs é feito apartir da seguinte API [ulvis.net](https://ulvis.net/developer.html). <br><br>
 
 ## Tecnologias
